@@ -1,0 +1,25 @@
+package com.rays.IOC;
+
+import org.springframework.beans.factory.annotation.Value;
+
+public class payment {
+	
+	@Value(value = "100")
+	double balance = 0;
+	
+	public double getBalance() {
+		return balance;
+		}
+	public void setBalance (double balance) {
+		this.balance = balance;
+		}
+	public double makePayment(double amt) {
+		balance = balance- amt;
+		return balance;
+		}
+	public double deposit(double amt) {
+		balance = balance + amt;
+		return balance;
+	}
+ 
+}
